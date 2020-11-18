@@ -1,0 +1,531 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Plugins &mdash; spectree  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Utils" href="utils.html" />
+    <link rel="prev" title="Response" href="response.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> spectree
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="spectree.html">SpecTree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="response.html">Response</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utils</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">spectree</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Plugins</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/plugins.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-spectree.plugins.base">
+<span id="plugins"></span><h1>Plugins<a class="headerlink" href="#module-spectree.plugins.base" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="spectree.plugins.base.BasePlugin">
+<em class="property">class </em><code class="sig-prename descclassname">spectree.plugins.base.</code><code class="sig-name descname">BasePlugin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">spectree</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spectree/plugins/base.html#BasePlugin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spectree.plugins.base.BasePlugin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base plugin for SpecTree plugin classes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>spectree</strong> – <code class="xref py py-class docutils literal notranslate"><span class="pre">spectree.SpecTree</span></code> instance</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="spectree.plugins.base.BasePlugin.bypass">
+<code class="sig-name descname">bypass</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func</span></em>, <em class="sig-param"><span class="n">method</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spectree/plugins/base.html#BasePlugin.bypass"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spectree.plugins.base.BasePlugin.bypass" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>func</strong> – route function (endpoint)</p></li>
+<li><p><strong>method</strong> – HTTP method for this route function</p></li>
+</ul>
+</dd>
+</dl>
+<p>bypass some routes that shouldn’t be shown in document</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="spectree.plugins.base.BasePlugin.find_routes">
+<code class="sig-name descname">find_routes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/spectree/plugins/base.html#BasePlugin.find_routes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spectree.plugins.base.BasePlugin.find_routes" title="Permalink to this definition">¶</a></dt>
+<dd><p>find the routes from application</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="spectree.plugins.base.BasePlugin.parse_func">
+<code class="sig-name descname">parse_func</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">route</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spectree/plugins/base.html#BasePlugin.parse_func"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spectree.plugins.base.BasePlugin.parse_func" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>route</strong> – API routes</p>
+</dd>
+</dl>
+<p>get the endpoint function from routes</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="spectree.plugins.base.BasePlugin.parse_path">
+<code class="sig-name descname">parse_path</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">route</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spectree/plugins/base.html#BasePlugin.parse_path"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spectree.plugins.base.BasePlugin.parse_path" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>route</strong> – API routes</p>
+</dd>
+</dl>
+<p>parse URI path to get the variables in path</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="spectree.plugins.base.BasePlugin.register_route">
+<code class="sig-name descname">register_route</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">app</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spectree/plugins/base.html#BasePlugin.register_route"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spectree.plugins.base.BasePlugin.register_route" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>app</strong> – backend framework application</p>
+</dd>
+</dl>
+<p>register document API routes to application</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="spectree.plugins.base.BasePlugin.validate">
+<code class="sig-name descname">validate</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spectree/plugins/base.html#BasePlugin.validate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spectree.plugins.base.BasePlugin.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>validate the request and response</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="spectree.plugins.base.Context">
+<em class="property">class </em><code class="sig-prename descclassname">spectree.plugins.base.</code><code class="sig-name descname">Context</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">query</span></em>, <em class="sig-param"><span class="n">json</span></em>, <em class="sig-param"><span class="n">headers</span></em>, <em class="sig-param"><span class="n">cookies</span></em><span class="sig-paren">)</span><a class="headerlink" href="#spectree.plugins.base.Context" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt id="spectree.plugins.base.Context.cookies">
+<code class="sig-name descname">cookies</code><a class="headerlink" href="#spectree.plugins.base.Context.cookies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 3</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="spectree.plugins.base.Context.headers">
+<code class="sig-name descname">headers</code><a class="headerlink" href="#spectree.plugins.base.Context.headers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="spectree.plugins.base.Context.json">
+<code class="sig-name descname">json</code><a class="headerlink" href="#spectree.plugins.base.Context.json" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="spectree.plugins.base.Context.query">
+<code class="sig-name descname">query</code><a class="headerlink" href="#spectree.plugins.base.Context.query" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-spectree.plugins.flask_plugin"></span><dl class="py class">
+<dt id="spectree.plugins.flask_plugin.FlaskPlugin">
+<em class="property">class </em><code class="sig-prename descclassname">spectree.plugins.flask_plugin.</code><code class="sig-name descname">FlaskPlugin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">spectree</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spectree/plugins/flask_plugin.html#FlaskPlugin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spectree.plugins.flask_plugin.FlaskPlugin" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt id="spectree.plugins.flask_plugin.FlaskPlugin.bypass">
+<code class="sig-name descname">bypass</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func</span></em>, <em class="sig-param"><span class="n">method</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spectree/plugins/flask_plugin.html#FlaskPlugin.bypass"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spectree.plugins.flask_plugin.FlaskPlugin.bypass" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>func</strong> – route function (endpoint)</p></li>
+<li><p><strong>method</strong> – HTTP method for this route function</p></li>
+</ul>
+</dd>
+</dl>
+<p>bypass some routes that shouldn’t be shown in document</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="spectree.plugins.flask_plugin.FlaskPlugin.find_routes">
+<code class="sig-name descname">find_routes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/spectree/plugins/flask_plugin.html#FlaskPlugin.find_routes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spectree.plugins.flask_plugin.FlaskPlugin.find_routes" title="Permalink to this definition">¶</a></dt>
+<dd><p>find the routes from application</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="spectree.plugins.flask_plugin.FlaskPlugin.parse_func">
+<code class="sig-name descname">parse_func</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">route</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spectree/plugins/flask_plugin.html#FlaskPlugin.parse_func"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spectree.plugins.flask_plugin.FlaskPlugin.parse_func" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>route</strong> – API routes</p>
+</dd>
+</dl>
+<p>get the endpoint function from routes</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="spectree.plugins.flask_plugin.FlaskPlugin.parse_path">
+<code class="sig-name descname">parse_path</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">route</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spectree/plugins/flask_plugin.html#FlaskPlugin.parse_path"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spectree.plugins.flask_plugin.FlaskPlugin.parse_path" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>route</strong> – API routes</p>
+</dd>
+</dl>
+<p>parse URI path to get the variables in path</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="spectree.plugins.flask_plugin.FlaskPlugin.register_route">
+<code class="sig-name descname">register_route</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">app</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spectree/plugins/flask_plugin.html#FlaskPlugin.register_route"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spectree.plugins.flask_plugin.FlaskPlugin.register_route" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>app</strong> – backend framework application</p>
+</dd>
+</dl>
+<p>register document API routes to application</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="spectree.plugins.flask_plugin.FlaskPlugin.validate">
+<code class="sig-name descname">validate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func</span></em>, <em class="sig-param"><span class="n">query</span></em>, <em class="sig-param"><span class="n">json</span></em>, <em class="sig-param"><span class="n">headers</span></em>, <em class="sig-param"><span class="n">cookies</span></em>, <em class="sig-param"><span class="n">resp</span></em>, <em class="sig-param"><span class="n">before</span></em>, <em class="sig-param"><span class="n">after</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spectree/plugins/flask_plugin.html#FlaskPlugin.validate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spectree.plugins.flask_plugin.FlaskPlugin.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>validate the request and response</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-spectree.plugins.falcon_plugin"></span><dl class="py class">
+<dt id="spectree.plugins.falcon_plugin.FalconPlugin">
+<em class="property">class </em><code class="sig-prename descclassname">spectree.plugins.falcon_plugin.</code><code class="sig-name descname">FalconPlugin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">spectree</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spectree/plugins/falcon_plugin.html#FalconPlugin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spectree.plugins.falcon_plugin.FalconPlugin" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt id="spectree.plugins.falcon_plugin.FalconPlugin.bypass">
+<code class="sig-name descname">bypass</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func</span></em>, <em class="sig-param"><span class="n">method</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spectree/plugins/falcon_plugin.html#FalconPlugin.bypass"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spectree.plugins.falcon_plugin.FalconPlugin.bypass" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>func</strong> – route function (endpoint)</p></li>
+<li><p><strong>method</strong> – HTTP method for this route function</p></li>
+</ul>
+</dd>
+</dl>
+<p>bypass some routes that shouldn’t be shown in document</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="spectree.plugins.falcon_plugin.FalconPlugin.find_routes">
+<code class="sig-name descname">find_routes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/spectree/plugins/falcon_plugin.html#FalconPlugin.find_routes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spectree.plugins.falcon_plugin.FalconPlugin.find_routes" title="Permalink to this definition">¶</a></dt>
+<dd><p>find the routes from application</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="spectree.plugins.falcon_plugin.FalconPlugin.parse_func">
+<code class="sig-name descname">parse_func</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">route</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spectree/plugins/falcon_plugin.html#FalconPlugin.parse_func"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spectree.plugins.falcon_plugin.FalconPlugin.parse_func" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>route</strong> – API routes</p>
+</dd>
+</dl>
+<p>get the endpoint function from routes</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="spectree.plugins.falcon_plugin.FalconPlugin.parse_path">
+<code class="sig-name descname">parse_path</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">route</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spectree/plugins/falcon_plugin.html#FalconPlugin.parse_path"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spectree.plugins.falcon_plugin.FalconPlugin.parse_path" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>route</strong> – API routes</p>
+</dd>
+</dl>
+<p>parse URI path to get the variables in path</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="spectree.plugins.falcon_plugin.FalconPlugin.register_route">
+<code class="sig-name descname">register_route</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">app</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spectree/plugins/falcon_plugin.html#FalconPlugin.register_route"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spectree.plugins.falcon_plugin.FalconPlugin.register_route" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>app</strong> – backend framework application</p>
+</dd>
+</dl>
+<p>register document API routes to application</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="spectree.plugins.falcon_plugin.FalconPlugin.validate">
+<code class="sig-name descname">validate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func</span></em>, <em class="sig-param"><span class="n">query</span></em>, <em class="sig-param"><span class="n">json</span></em>, <em class="sig-param"><span class="n">headers</span></em>, <em class="sig-param"><span class="n">cookies</span></em>, <em class="sig-param"><span class="n">resp</span></em>, <em class="sig-param"><span class="n">before</span></em>, <em class="sig-param"><span class="n">after</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spectree/plugins/falcon_plugin.html#FalconPlugin.validate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spectree.plugins.falcon_plugin.FalconPlugin.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>validate the request and response</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-spectree.plugins.starlette_plugin"></span><dl class="py class">
+<dt id="spectree.plugins.starlette_plugin.Route">
+<em class="property">class </em><code class="sig-prename descclassname">spectree.plugins.starlette_plugin.</code><code class="sig-name descname">Route</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span></em>, <em class="sig-param"><span class="n">methods</span></em>, <em class="sig-param"><span class="n">func</span></em><span class="sig-paren">)</span><a class="headerlink" href="#spectree.plugins.starlette_plugin.Route" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt id="spectree.plugins.starlette_plugin.Route.func">
+<code class="sig-name descname">func</code><a class="headerlink" href="#spectree.plugins.starlette_plugin.Route.func" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="spectree.plugins.starlette_plugin.Route.methods">
+<code class="sig-name descname">methods</code><a class="headerlink" href="#spectree.plugins.starlette_plugin.Route.methods" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="spectree.plugins.starlette_plugin.Route.path">
+<code class="sig-name descname">path</code><a class="headerlink" href="#spectree.plugins.starlette_plugin.Route.path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="spectree.plugins.starlette_plugin.StarlettePlugin">
+<em class="property">class </em><code class="sig-prename descclassname">spectree.plugins.starlette_plugin.</code><code class="sig-name descname">StarlettePlugin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">spectree</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spectree/plugins/starlette_plugin.html#StarlettePlugin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spectree.plugins.starlette_plugin.StarlettePlugin" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt id="spectree.plugins.starlette_plugin.StarlettePlugin.bypass">
+<code class="sig-name descname">bypass</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func</span></em>, <em class="sig-param"><span class="n">method</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spectree/plugins/starlette_plugin.html#StarlettePlugin.bypass"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spectree.plugins.starlette_plugin.StarlettePlugin.bypass" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>func</strong> – route function (endpoint)</p></li>
+<li><p><strong>method</strong> – HTTP method for this route function</p></li>
+</ul>
+</dd>
+</dl>
+<p>bypass some routes that shouldn’t be shown in document</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="spectree.plugins.starlette_plugin.StarlettePlugin.find_routes">
+<code class="sig-name descname">find_routes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/spectree/plugins/starlette_plugin.html#StarlettePlugin.find_routes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spectree.plugins.starlette_plugin.StarlettePlugin.find_routes" title="Permalink to this definition">¶</a></dt>
+<dd><p>find the routes from application</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="spectree.plugins.starlette_plugin.StarlettePlugin.parse_func">
+<code class="sig-name descname">parse_func</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">route</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spectree/plugins/starlette_plugin.html#StarlettePlugin.parse_func"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spectree.plugins.starlette_plugin.StarlettePlugin.parse_func" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>route</strong> – API routes</p>
+</dd>
+</dl>
+<p>get the endpoint function from routes</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="spectree.plugins.starlette_plugin.StarlettePlugin.parse_path">
+<code class="sig-name descname">parse_path</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">route</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spectree/plugins/starlette_plugin.html#StarlettePlugin.parse_path"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spectree.plugins.starlette_plugin.StarlettePlugin.parse_path" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>route</strong> – API routes</p>
+</dd>
+</dl>
+<p>parse URI path to get the variables in path</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="spectree.plugins.starlette_plugin.StarlettePlugin.register_route">
+<code class="sig-name descname">register_route</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">app</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spectree/plugins/starlette_plugin.html#StarlettePlugin.register_route"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spectree.plugins.starlette_plugin.StarlettePlugin.register_route" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>app</strong> – backend framework application</p>
+</dd>
+</dl>
+<p>register document API routes to application</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="spectree.plugins.starlette_plugin.StarlettePlugin.validate">
+<em class="property">async </em><code class="sig-name descname">validate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func</span></em>, <em class="sig-param"><span class="n">query</span></em>, <em class="sig-param"><span class="n">json</span></em>, <em class="sig-param"><span class="n">headers</span></em>, <em class="sig-param"><span class="n">cookies</span></em>, <em class="sig-param"><span class="n">resp</span></em>, <em class="sig-param"><span class="n">before</span></em>, <em class="sig-param"><span class="n">after</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spectree/plugins/starlette_plugin.html#StarlettePlugin.validate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spectree.plugins.starlette_plugin.StarlettePlugin.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>validate the request and response</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="utils.html" class="btn btn-neutral float-right" title="Utils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="response.html" class="btn btn-neutral float-left" title="Response" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Keming Yang
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
